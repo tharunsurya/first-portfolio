@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+   margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family:"Poppins", sans-serif;
+    text-align: center;
+
+}
+
+html{
+     font-size: 62.7%;
+}
+
+body{
+      height: 100%;
+      width:100vh;
+      overflow-x: hidden;
+      background-color:black;
+      color: lightcoral;
+}
+
+header{
+      margin-top: 20px;
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      padding: 1rem 9%;
+      filter:drop-shadow(10px) ;
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      z-index:100;
+}
+
+.logo{
+      font-size: 3rem;
+      color: lightcoral;
+      font-style: italic;
+      font-weight: 100;
+      cursor: pointer;
+      transition: 0.5s ease;
+}
+
+.logo:hover{
+      transform: scale(1.3);
+}
+
+nav a{
+      font-size: 15px;
+      color: antiquewhite;
+      margin-left: 3rem;
+      font-weight:600px;
+      transition: 0.3s ease;
+      border-bottom: 3px solid transparent;
+
+}
+
+nav a:hover,
+nav a.active{
+      color: lightcoral;
+      border-bottom:2px solid;
+}
+@media(max-width:995px) {
+     nav{
+           position:absolute;
+           top:0%;
+           display:none;
+           right:0%;
+           width:40%;
+           border-left:1px solid lightcoral;
+           border-bottom-left-radius:2REM;
+           border-bottom:1px solid lightcoral  ;
+           padding: 1rem solid;
+           background-color:#161616;
+           border-top: 0.1rem solid rgba(0,0,0,0.1);
+      }
+      nav.active{
+           display: block;
+      }
+      nav a{
+           display: block;
+           font-size:2 rem;
+           margin: 3rem 0;
+      }
+      nav a:hover,
+      nav a.active{
+           padding: 6rem;
+           border-radius:0.5rem;
+           border-bottom:0.5rem solid lightcoral;
+      }
+}
+
+section{
+      min-height: 100vh;
+      padding: 5rem 9% 5rem;
+}
+
+.home {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;  /* Centers content vertically */
+     align-items: center;      /* Centers content horizontally */
+     gap: 2rem;                /* Adjusted gap for better spacing */
+     padding-top: 5%;          /* Reduce padding for better centering */
+     text-align: center;       /* Center text inside the section */
+ }
+ 
+ 
+ 
+.home .home-content h1{
+      font-size: 3rem;
+      font-weight: 700;
+}
+
+span{
+      color: red;
+}
+.home-content h3{
+       font-size: 4rem;
+       margin-bottom:1rem;
+       font-weight: 700;
+}
+
+.home img{
+      border-radius: 50%;
+      justify-content: center;
+      margin-left: 20px;
+}
+
+.home-img img{ 
+      position: relative;
+      width:32vh;
+      border-radius:50%;
+      box-shadow: 0.1rem solid rgba(0,0,0,0.1);
+      cursor:pointer;
+      transition: 0.2s linear;
+}
+.home-img img:hover{
+      font-size: 1.8rem;
+      font-weight:500;
+}
+.home-content p{
+     font-size: 1.5rem;
+     margin-bottom:1rem;
+     font-weight: 700;
+}
+
+.icons a{
+      display: inline-flex;
+      justify-content: center;
+      align-items:center;
+      width:4rem;
+      height:4rem;
+      background-color: transparent;
+      border: 0.2 rem salmon;
+      border-radius:50%;
+      font-size: 2rem;
+      margin:3rem 1.5rem 3rem;
+      border-style: double;
+      transition:0.3s ease;
+     color: aliceblue;
+}
+.icons a:hover{
+      transform:scale(1.7);
+      background-color:lightcoral;
+      box-shadow:lightcoral;
+}
+
+
+
+.btn{
+      display:inline-block;
+      padding: 1rem 2.8rem;
+      background-color:black;
+      border-radius:4rem;
+      font-size:1.6rem;
+      color: lightcoral;
+      letter-spacing: 0.3rem;
+      font-weight: 600;
+      border-radius:2px solid ;
+      border-style:solid;
+      transition:0.3s ease;
+      cursor:pointer;
+}
+
+.btn:hover{
+      transform: scale3d(1.4);
+      background-color: lightgray;
+      color: black;
+      box-shadow: 0 0 14px;
+}
+ 
+.text{
+      font-size:30px;
+      font-weight: 600;
+      min-width:280px;
+}
+
+@media(max-width:1000px){
+      .home{
+           gap:4rem;
+
+      }
+}
+
+@media(max-width:995px){
+      .home{
+           flex-direction: column;
+           margin:5rem 4rem;
+      }
+      .home .home-content h3{
+           font-size: 2.5rem;
+      }
+
+      .home-content h1{
+           font-size: 5rem;
+      }
+   
+      .home-img img{
+           margin-top: 4rem;
+      }
+}
+@keyframes colorChange {
+     0%, 100% {
+         color: red; /* Start and end with red */
+     }
+     50% {
+         color: lightcoral; /* Change to lightcoral at the midpoint */
+     }
+ }
+ 
+ span {
+     color: red; /* Initial color */
+     animation-name: colorChange;
+     animation-duration: 2s;
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+ }
+ 
